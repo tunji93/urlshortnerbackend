@@ -32,9 +32,6 @@ const options: TypeOrmModuleOptions = {
   logging: env.TYPEORM_LOGGING,
   synchronize: !(env.NODE_ENV === 'production'),
   ssl: env.NODE_ENV === 'test',
-  cli: {
-    migrationsDir: 'src/migrations',
-  },
 };
 
 export = options;
