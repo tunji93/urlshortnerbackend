@@ -23,4 +23,9 @@ export class UsersService {
     this.usersRepo.save(user);
     return user;
   }
+
+  async getUserByEmail(email: string): Promise<User | undefined> {
+    const user = this.usersRepo.findOneBy({ email: email });
+    return user;
+  }
 }
